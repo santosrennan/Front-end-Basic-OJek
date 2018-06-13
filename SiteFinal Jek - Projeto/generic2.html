@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Jek Join</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main2.css" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index2.html" class="logo"><strong style="font-size:200%">Jek</strong> join</a>
+					<nav id="nav">
+						<a href="index2.html">Home</a>
+						<a href="index2.html#footer">Login</a>
+						<a href="#">Join</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+		<!-- Footer -->
+			<footer id="footer" class="fgeneric">
+				<div class="inner">
+
+					<h3><strong style="font-size:130%">Cadastre-se</strong></h3>
+					<p style="visibility:hidden; font-size:80%;margin:0; border-radius:0px;" class="button" id ="msg_erro" > Preencha todo o formulário por favor.</p>
+					<form action="#" method="post">
+
+						<div class="field half first">
+							<label style="font-size:110%"for="name">Nome  <span style="color:#5ab884;font-size:150%" class="icon fa-user"></span></label>
+							<input name="name" id="name" type="text" placeholder="Nome">
+						</div>
+						<div class="field half">
+							<label style="font-size:110%"for="email">Email <span style="color:#5ab884;font-size:150%" class="icon fa-envelope"></span></label>
+							<input name="email" id="email" type="email" placeholder="Email">
+						</div>
+						<br>
+						<div class="field half first">
+							<label style="font-size:110%"for="cartao-credito">Cartão de Credito <span style="color:#5ab884;font-size:150%" class="icon fa-credit-card"></span></label>
+							<input name="cartao-credito" id="cartaoc" type="text" placeholder="XXXX-XXXX-XXXX-XXXX-XXX">
+						</div>
+						<div class="field half">
+							<label style="font-size:110%"for="conta-bancaria">Conta Bancaria <span style="color:#5ab884;font-size:150%" class="icon fa-bank"></span></label>
+							<input name="conta-bancaria" id="contab" type="text" placeholder="XXXX-XXXXX">
+						</div>
+						<br>
+						<div class="field half first">
+							<label style="font-size:110%"for="senha">Senha <span style="color:#5ab884;font-size:150%" class="icon fa-lock"></span></label>
+							<input name="senha" id="senha" type="password" placeholder="Senha">
+						</div>
+						<div class="field half">
+							<label style="font-size:110%"for="rsenha">Repita a senha <span style="color:#5ab884;font-size:150%" class="icon fa-lock"></span></label>
+							<input name="rsenha" id="rsenha" type="password" placeholder="Repita a Senha">
+						</div>
+						<div class="field half first">
+							<label style="font-size:110%"for="cpf">CPF  <span style="color:#5ab884;font-size:150%" class="icon fa-male"></span></label>
+							<input name="cpf" id="cpf" type="text" placeholder="CPF">
+						</div>
+						<div class="field half ">
+							<label style="font-size:110%"for="tel">Telefone  <span style="color:#5ab884;font-size:150%" class="icon fa-phone"></span></label>
+							<input name="tel" id="tel" type="text" placeholder="Telefone">
+						</div>
+						<ul class="actions">
+							<li><a class="button alt" id="index3">Enviar</a></li>
+						</ul>
+					</form>
+				
+
+
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script> 
+					$( document ).ready(function() {
+						$( "#index3" ).click(function() {
+							if(	$("#name").val() == "" ||
+								$("#email").val() == "" ||
+								$("#cartaoc").val() == "" ||
+								$("#contab").val() == "" ||
+								$("#senha").val() == "" ||
+								$("#rsenha").val() == "" ||
+								$("#cpf").val() == "" ||
+								$("#tel").val() == "" 
+							)
+							{
+								$('#msg_erro').css('visibility', 'visible');
+								$("html, body").animate({ scrollTop: 0 }, "slow");
+							} else {
+								$('#msg_erro').css('visibility', 'hidden');
+								window.location.href = 'cadastrosucesso.html';
+							}
+						});
+					});
+			</script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

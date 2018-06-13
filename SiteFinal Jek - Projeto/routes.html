@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Jek Routes</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		<link rel="stylesheet" href="assets/css/main2.css" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index3.html" class="logo"><strong style="font-size:200%">Jek</strong> routes</a>
+					<nav id="nav">
+						<a href="index3.html">Home</a>
+						<a href="index2.html">Logout</a>
+						<a href="index3.html#footer">SAC</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+		<!-- Footer -->
+			<div id="footer" class="fgeneric">
+				<div class="inner">
+			<form method="post" action="routes.html">
+                <fieldset>
+                    <legend style="font-size:200%">Criar Rota de Entrega</legend>
+                    <br><br>
+                    <div class="field half first">
+                        <label for="txtEnderecoPartida">Endereço de partida  <span style="color:#5ab884;font-size:150%" class="icon fa-circle-o"></span></label>
+                        <input type="text" id="txtEnderecoPartida" name="txtEnderecoPartida" />
+                    </div>
+                    
+                    <div class="field half">
+                        <label for="txtEnderecoChegada">Endereço de chegada  <span style="color:#5ab884;font-size:150%" class="icon fa-map-marker"></span></label>
+                        <input type="text" id="txtEnderecoChegada" name="txtEnderecoChegada" />
+                    </div>
+                    <ul class="actions">
+							<li><input type="submit" class="buttom alt" id="btnEnviar" name="btnEnviar" value="Gerar Rota" /></li>
+							<li><a class="button alt" href="form-entrega.html">Continuar</a></li>
+					</ul>
+                </fieldset>
+				<div>
+					<div id="mapa" class="field half first"></div>
+            
+					<div id="trajeto-texto" class="field half"></div>
+				</div>
+			</form>	
+			</div>
+		<script src="js/jquery.min.js"></script>
+		
+        <!-- Maps API Javascript -->
+        <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+ 
+        <!-- Arquivo de inicialização do mapa -->
+		<script src="js/mapa.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

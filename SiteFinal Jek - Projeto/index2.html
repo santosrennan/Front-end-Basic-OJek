@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Jek Company</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		
+	</head>
+	<body>
+
+		<!-- Header #6cc091-->
+			<header id="header">
+				<div class="inner">
+					<a href="index2.html" class="logo"><strong style="font-size: 200%;">Jek</strong> co</a>
+					<nav id="nav">
+						<a href="#">Home</a>
+						<a id="#login" href="#footer">Login</a>
+						<a href="#three">More</a>
+						<a href="generic2.html">Join</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<header>
+						<h1 style="font-size: 600%;">Jek</h1>
+					</header>
+
+					<div class="flex ">
+
+						<div>
+							<a style="text-decoration:none" href="prototype2/index.html" target="_blank"><span class="icon fa-mobile"></span>
+							<h3>App</h3></a>
+							<p>Use nossos serviços pelo seu Celular</p>
+						</div>
+
+						<div>
+							<span class="icon fa-archive"></span>
+							<h3>Delivery</h3>
+							<p>Entregas Rápidas</p>
+						</div>
+
+						<div>
+							<span class="icon fa-motorcycle"></span>
+							<h3>O Jek</h3>
+							<p>Economize tempo com Jek Mototaxi</p>
+						</div>
+
+					</div>
+
+					<footer>
+						<a href="#footer" class="button">Comece a usar</a>
+					</footer>
+				</div>
+			</section>
+
+
+		<!-- Three -->
+			<section id="three" class="wrapper align-center">
+				<div class="inner">
+					<div class="flex flex-2">
+						<article>
+							<div class="image round">
+								<img src="images/pic01.jpg" alt="Pic 01" />
+							</div>
+							<header>
+								<h3>Aprenda a usar<br /> o nosso aplicativo</h3>
+							</header>
+							<p>Com o nosso aplicativo você vai poder pedir<br />corridas e entregas de onde você estiver<br />facilmente em alguns toques.</p>
+							<footer>
+								<a href="generic3.html" class="button">Leia Mais</a>
+							</footer>
+						</article>
+						<article>
+							<div class="image round">
+								<img src="images/pic002.jpg" alt="Pic 02" />
+							</div>
+							<header>
+								<h3>Seja nosso parceiro<br /> faça entregas e/ou corridas</h3>
+							</header>
+							<p>Sendo nosso parceiro você vai ajudar a sociedade a se livrar do trânsito,<br /> conseguir uma renda extra ou viver do serviço<br /> e muitas outras vantagens.</p>
+							<footer>
+								<a href="generic3.html" class="button">Leia Mais</a>
+							</footer>
+						</article>
+					</div>
+				</div>
+			</section>
+			<br>
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+
+					<h3>Log In</h3>
+
+					<form action="#" method="post">
+							<p class="button alt" style="visibility:hidden; margin:0; font-size:90%;border-radius:0px;" id ="msg_erro" > Preencha os campos de usuário e senha corretamente.</p><br><br>
+						<div class="field half">
+							<label for="email">Email</label>
+							<input name="email" id="email" type="email" placeholder="Email">
+						</div>
+						<br>
+						<div class="field half">
+							<label for="message">Senha</label>
+							<input name="senha" type="password" id="senha" placeholder="Senha">
+						</div>
+						<ul class="actions">
+							<li><a class="button alt" id="index3" style="display:block">Entrar</a></li>
+						</ul>
+					</form>
+					<p style="color:#fff">Ainda não é um membro: </p><a href="generic2.html" class="button alt">Cadastre-se</a>
+					<br><br>	
+					
+
+				</div>
+				
+			</footer>
+
+		<!-- Scripts -->
+			<script> 
+					$( document ).ready(function() {
+						$( "#index3" ).click(function() {
+							if($("#email").val() == "john@mymail.com" && $("#senha").val() == "123456"){
+								$('#msg_erro').css('visibility', 'hidden');
+								window.location.href = 'index3.html';
+							} else {
+								$('#msg_erro').focus().css('visibility', 'visible');
+								
+							}
+						});
+					});
+			</script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Jek User</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index3.html" class="logo"><strong style="font-size:200%">Jek</strong> user</a>
+					<nav id="nav">
+						<a href="#">Home</a>
+						<a href="jekorjoin.html">OJek</a>
+						<a href="index2.html">Logout</a>
+						<a href="#footer">SAC</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<header>
+						<h1>Bem Vindo à Jek</h1>
+					</header>
+
+					<div class="flex ">
+
+						<div>
+							<span class="icon fa-clock-o"></span>
+							<h3>Não se atrase!</h3>
+							<p>Fuja do trânsito com nosso serviço</p>
+						</div>
+
+						<div>
+							<span class="icon fa-map-marker"></span>
+							<h3>Onde Estamos?</h3>
+							<p>Veja se tem algum OJek próximo</p>
+						</div>
+
+					</div>
+
+					<footer>
+						<a href="#three" class="button">Pedir Serviço</a>
+					</footer>
+				</div>
+			</section>
+
+
+		<!-- Three -->
+			<section id="three" class="wrapper align-center">
+			<h1 style="font-size:300%">Serviços</h1>
+				<div class="inner">
+					<div class="flex flex-2">
+						<article>
+							<div class="image round">
+								<img src="images/mbwr.jpg" alt="Pic 01" />
+							</div>
+							<header>
+								<h3 style="font-size:200%">Corrida<br/></h3>
+							</header>
+							<footer>
+								<a href="routes-corrida.html" class="button" style="font-size:110%">Pedir Corrida</a>
+							</footer>
+						</article>
+
+						<article>
+							<div class="image round">
+								<img src="images/ebwr.jpg" alt="Pic 02" />
+							</div>
+							<header>
+								<h3 style="font-size:200%">Entrega<br/></h3>
+							</header>
+							<footer>
+								<a href="routes.html" class="button" style="font-size:110%">Pedir Entrega</a>
+							</footer>
+						</article>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+
+					<h3 style="margin-bottom:0">Serviço de Atendimento ao cliente</h3>
+					<p style="visibility:hidden; font-size:80%;margin:0; border-radius:0px;" class="button alt" id ="msg_erro" > Preencha todos os campos por favor.</p><br><br>
+					<form action="#" method="post">
+						<div class="field half first">
+							<label for="name">Nome</label>
+							<input name="name" id="name" type="text" placeholder="Nome">
+						</div>
+						<div class="field half">
+							<label for="email">Email</label>
+							<input name="email" id="email" type="email" placeholder="Email">
+						</div>
+						<div class="field">
+							<label for="message">Mensagem</label>
+							<textarea name="message" id="message" rows="6" placeholder="Mensagem"></textarea>
+						</div>
+						<ul class="actions">
+							<li><a id="reclamacaosucesso" class="button alt">Enviar Mensagem</a></li>
+						</ul>
+					</form>
+
+
+
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script> 
+					$( document ).ready(function() {
+						$( "#reclamacaosucesso" ).click(function() {
+							if(	$("#name").val() == "" ||
+								$("#email").val() == "" ||
+								$("#message").val() == "")
+							{
+								$('#msg_erro').css('visibility', 'visible');
+							} else {
+								$('#msg_erro').css('visibility', 'hidden');
+								window.location.href = 'reclamacaosucesso.html';
+							}
+						});
+					});
+			</script>	
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

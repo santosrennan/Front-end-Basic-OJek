@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Jek Join</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main2.css" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index3.html" class="logo"><strong style="font-size:200%">Jek</strong> join</a>
+					<nav id="nav">
+						<a href="index3.html">Home</a>
+						<a href="index2.html">Logout</a>
+						<a href="index3.html#footer">SAC</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+		<!-- Footer -->
+			<footer id="footer" class="fgeneric">
+				<div class="inner">
+
+					<h3 style="margin:0"><strong style="font-size:130%">Cadastre seu Veículo</strong></h3>
+					<p style="visibility:hidden; font-size:80%;margin:0; border-radius:0px;" class="button" id ="msg_erro" > Preencha todo o formulário por favor.</p>
+					<br><br>
+					<form action="#" method="post">
+
+						<div class="field half first">
+							<label style="font-size:110%"for="name">Placa  <span style="color:#5ab884;font-size:150%" class="icon fa-registered"></span></label>
+							<input name="name" id="placa" type="text" placeholder="Placa">
+						</div>
+						<div class="field half">
+							<label style="font-size:110%"for="email">Nome Veículo <span style="color:#5ab884;font-size:150%" class="icon fa-motorcycle"></span></label>
+							<input name="email" id="nomev" type="text" placeholder="Email">
+						</div>
+						<br>
+						<div class="field half first">
+							<label style="font-size:110%"for="name">CNH <span style="color:#5ab884;font-size:150%" class="icon fa-info-circle"></span></label>
+							<input name="name" id="cnh" type="text" placeholder="XXXXXXX">
+						</div>
+						<ul class="actions">
+							<li><a class="button alt" id="cadastrosucesso2">Enviar</a></li>
+						</ul>
+					</form>
+
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script> 
+					$( document ).ready(function() {
+						$( "#cadastrosucesso2" ).click(function() {
+							if($("#placa").val() == "" || $("#nomev").val() == "" || $("#cnh").val() == ""){
+								$('#msg_erro').focus().css('visibility', 'visible');
+								
+							} else {
+								$('#msg_erro').css('visibility', 'hidden');
+								window.location.href = 'cadastrosucesso2.html';								
+							}
+						});
+					});
+			</script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

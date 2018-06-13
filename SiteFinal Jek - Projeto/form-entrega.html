@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Jek Delivery</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main2.css" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index3.html" class="logo"><strong style="font-size:200%">Jek</strong> delivery</a>
+					<nav id="nav">
+						<a href="index3.html">Home</a>
+						<a href="index2.html">Logout</a>
+						<a href="index3.html#footer">SAC</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+		<!-- Footer -->
+			<footer id="footer" class="fgeneric">
+				<div class="inner">
+
+					<h3 style="margin:0;"><strong style="font-size:130%;">Formulário de Entrega</strong></h3>
+					<p style="visibility:hidden; font-size:80%;margin:0; border-radius:0px;" class="button" id ="msg_erro" > Preencha os campos necessários por favor.</p><br><br><br>
+					<form action="#" method="post">
+
+						<div class="field half first">
+							<label style="font-size:110%;"for="name">Nome do remetente <span style="color:#5ab884;font-size:150%" class="icon fa-male"></span></label>
+							<input name="name" id="name" type="text" placeholder="Name">
+						</div>
+						<div class="field half">
+							<label style="font-size:110%"for="comp">Complementos e referências <span style="color:#5ab884;font-size:150%" class="icon fa-map-signs"></span></label>							
+							<input name="comp" id="comp" type="text" placeholder="Email">
+						</div>
+						<div class="field">
+							<label style="font-size:110%" for="message">Descrição do Envio(Opcional) <span style="color:#5ab884;font-size:150%" class="icon fa-sticky-note"></span></label>
+							<textarea name="message" id="message" rows="6" placeholder="Mesagem"></textarea>
+						</div>
+						<ul class="actions">
+							<li><a class="button alt" id="pedidosucesso">Concluir</a></li>
+						</ul>
+					</form>
+
+					<div class="copyright">
+						&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
+					</div>
+
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script>
+					$( document ).ready(function() {
+						$( "#pedidosucesso" ).click(function() {
+							if($("#name").val() == "" && $("#comp").val() == ""){
+								$('#msg_erro').focus().css('visibility', 'visible');
+								$("html, body").animate({ scrollTop: 0 }, "slow");
+							} else {
+								$('#msg_erro').css('visibility', 'hidden');
+								window.location.href = 'pedidosucesso.html';
+							}
+						});
+					});
+			</script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
